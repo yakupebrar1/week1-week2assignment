@@ -18,7 +18,7 @@
 
 int main(void)
 {
-    // TODO: Prompt the user for their name using get_string()
+    printf()
 
 
     // TODO: Print "hello, " followed by their name using printf()
