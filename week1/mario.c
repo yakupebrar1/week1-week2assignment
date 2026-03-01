@@ -32,7 +32,7 @@ int main(void)
 
     for (int row = 1; row <= height; row++)
     {
-        for(int space = 0; space < height; height - row; space++ )
+        for (int space = 0; space < height - row; space++)
         {
             printf(" ");
         }
