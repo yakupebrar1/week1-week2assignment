@@ -34,16 +34,25 @@ int main(void)
     for (int row = 1; row <= height; row++)
     {
         // TODO: Print (height - row) leading spaces
-
+        for (int space = 0; space < height- row; space++)
+        {
+            printf(" ");
+        }
 
         // TODO: Print (row) hashes — LEFT side
-
+        for (int hash = 0; hash < row; hash++)
+        {
+            printf("#");
+        }
 
         // The gap between the two pyramids is always exactly two spaces.
         printf("  ");
 
         // TODO: Print (row) hashes — RIGHT side (mirror of left, no leading spaces)
-
+        for (int hash = 0; hash < row; hash++)
+        {
+            printf("#");
+        }
 
         printf("\n");
     }
