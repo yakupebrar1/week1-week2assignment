@@ -44,7 +44,7 @@ int main(void)
     // TODO: Use a loop to count digits.
     //       Hint: make a copy of the number, divide by 10 each iteration,
     //       stop when the copy reaches 0.
-    int copy = card;
+    long copy = card;
 
     while(copy > 0){
         copy /= 10;
