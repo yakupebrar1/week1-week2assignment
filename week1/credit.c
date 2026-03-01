@@ -69,12 +69,42 @@ int main(void)
 
     copy = card;
     int position = 0;
+    while (copy > 0)
+    {
+        int digit = temp % 10;
+
+        if (position % 2 == 1)
+        {
+            int doubled = digit * 2;
+
+            if (doubled >= 10)
+            {
+                sum_doubled += (doubled / 10) + (doubled % 10);
+            }
+            else
+            {
+                sum_doubled += doubled;
+            }
+        }
+        else
+        {
+            sum_rest += digit;
+        }
+
+        copy /= 10;
+        position++;
+    }
+
+
 
     // -----------------------------------------------------------------------
     // STEP 3: Check validity
     // -----------------------------------------------------------------------
     // TODO: If (sum_doubled + sum_rest) % 10 != 0, print INVALID and return.
-
+    if((sum_doubled + sum_rest) % 10 != 0){
+        printf("INVALID\n");
+        return 0;
+    }
 
     // -----------------------------------------------------------------------
     // STEP 4: Identify card type
