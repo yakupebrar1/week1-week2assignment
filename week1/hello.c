@@ -18,9 +18,7 @@
 
 int main(void)
 {
-    printf()
-
-
-    // TODO: Print "hello, " followed by their name using printf()
+    string name = get_string("What is your name? ");
+    printf("hello, %s/n", name);
 
 }
