@@ -29,14 +29,20 @@ int main(void)
     }
     while (height < 1 || height > 8);
 
-    
+
     for (int row = 1; row <= height; row++)
     {
-        // TODO: Print (height - row) spaces using a for loop.
+        for(int space = 0; space < height; height - row; space++ )
+        {
+            printf(" ");
+        }
 
 
         // TODO: Print (row) hashes using a for loop.
-
+        for(int hash = 0; hash < row; hash++)
+        {
+            printf("#");
+        }
 
         // Print a newline to end the row.
         printf("\n");
