@@ -71,7 +71,7 @@ int main(void)
     int position = 0;
     while (copy > 0)
     {
-        int digit = temp % 10;
+        int digit = copy % 10;
 
         if (position % 2 == 1)
         {
@@ -120,6 +120,35 @@ int main(void)
     //   VISA:       (length == 13 || length == 16) && first digit == 4
     //               Hint for VISA: first2 / 10 == 4
     //   Otherwise:  INVALID
+
+    long first_digits = card;
+    while (first_digits >= 100)
+    {
+        first_digits /= 10;
+    }
+
+    int first2 = first_digits;
+    int first1 = first2 / 10;
+
+    if (length == 15 && (first2 == 34 || first2 == 37))
+    {
+        printf("AMEX\n");
+    }
+    else if (length == 16 && first2 >= 51 && first2 <= 55)
+    {
+        printf("MASTERCARD\n");
+    }
+    else if ((length == 13 || length == 16) && first1 == 4)
+    {
+        printf("VISA\n");
+    }
+    else
+    {
+        printf("INVALID\n");
+    }
+
+    return 0;
+
 
 
 }
