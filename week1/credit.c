@@ -32,6 +32,8 @@ int main(void)
 {
     // TODO: Prompt user for a credit card number using get_long()
     //       Hint: card numbers can exceed int range — use `long`
+    long card = get_long("Card Number: ");
+
 
 
     // -----------------------------------------------------------------------
@@ -42,6 +44,12 @@ int main(void)
     // TODO: Use a loop to count digits.
     //       Hint: make a copy of the number, divide by 10 each iteration,
     //       stop when the copy reaches 0.
+    int copy = card;
+
+    while(copy > 0){
+        copy /= 10;
+        length++;
+    }
 
 
     // -----------------------------------------------------------------------
@@ -59,6 +67,8 @@ int main(void)
     //                                add to sum_doubled
     //       If position i is EVEN → add directly to sum_rest
 
+    copy = card;
+    int position = 0;
 
     // -----------------------------------------------------------------------
     // STEP 3: Check validity
